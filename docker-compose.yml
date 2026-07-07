@@ -1,0 +1,8 @@
+services:
+  web:
+    build: .
+    ports:
+      - '8080:80'
+    volumes:
+      # bind mount para desarrollo: los cambios en los archivos se ven sin reconstruir la imagen
+      - ./:/usr/share/nginx/html

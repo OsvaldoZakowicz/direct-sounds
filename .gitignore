@@ -1,0 +1,11 @@
+# sistema operativo / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# docker
+*.log
+
+# por si en algun momento se suma alguna dependencia npm
+node_modules/
