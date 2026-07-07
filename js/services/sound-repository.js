@@ -23,6 +23,7 @@ export class SoundRepository {
 
   // metodo privado, contruye las url directas al bucket de supabase
   // el bucket es de acceso publico, por eso son urls asi
+  // agrega publicUrl como url de reproduccion del sonido
   #mapearConUrl(sonido) {
     return {
       ...sonido,
