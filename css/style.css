@@ -1,0 +1,174 @@
+:root {
+  --bg: #10151b;
+  --surface: #1a222b;
+  --border: #2a3540;
+  --texto: #e7ecf0;
+  --texto-muted: #8b98a5;
+  --acento: #35d0c0;
+  --acento-oscuro: #0f6e56;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--texto);
+  font-family:
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    sans-serif;
+  line-height: 1.5;
+}
+
+.encabezado {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 48px 24px 24px;
+}
+
+.encabezado h1 {
+  font-size: 22px;
+  font-weight: 500;
+  margin: 0 0 8px;
+}
+
+.encabezado p {
+  color: var(--texto-muted);
+  margin: 0;
+  font-size: 14px;
+}
+
+.grid {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 24px 64px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: border-color 0.2s ease;
+}
+
+.card--sonando {
+  border-color: var(--acento);
+}
+
+.card__nombre {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0 0 4px;
+}
+
+.card__meta {
+  font-size: 12px;
+  color: var(--texto-muted);
+  margin: 0;
+}
+
+.card__meta a {
+  color: var(--texto-muted);
+}
+
+.card__acciones {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--texto);
+  font-size: 13px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  border-color: var(--acento);
+}
+
+.btn--play {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.card--sonando .btn--play {
+  border-color: var(--acento);
+  color: var(--acento);
+}
+
+/* elemento distintivo: un pulso tipo radar alrededor del boton mientras suena */
+/* referencia directa al mundo de seguimiento gps de obersat */
+.btn__ping {
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 1px solid var(--acento);
+  opacity: 0;
+}
+
+.card--sonando .btn__ping {
+  animation: ping 1.4s ease-out infinite;
+}
+
+@keyframes ping {
+  0% {
+    transform: scale(0.7);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card--sonando .btn__ping {
+    animation: none;
+  }
+}
+
+#toast {
+  position: fixed;
+  left: 50%;
+  bottom: 24px;
+  transform: translate(-50%, 12px);
+  background: var(--acento-oscuro);
+  color: #eafff9;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.toast--visible {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
