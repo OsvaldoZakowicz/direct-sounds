@@ -32,8 +32,14 @@ body {
 }
 
 .encabezado h1 {
+  font-size: 26px;
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+
+.encabezado h2 {
   font-size: 22px;
-  font-weight: 500;
+  font-weight: 400;
   margin: 0 0 8px;
 }
 
@@ -71,6 +77,7 @@ body {
   font-size: 16px;
   font-weight: 500;
   margin: 0 0 4px;
+  text-transform: capitalize;
 }
 
 .card__meta {
@@ -121,7 +128,6 @@ body {
 }
 
 /* elemento distintivo: un pulso tipo radar alrededor del boton mientras suena */
-/* referencia directa al mundo de seguimiento gps de obersat */
 .btn__ping {
   position: absolute;
   inset: -6px;
@@ -151,7 +157,7 @@ body {
   }
 }
 
-#toast {
+.toast {
   position: fixed;
   left: 50%;
   bottom: 24px;
