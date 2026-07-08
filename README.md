@@ -40,17 +40,28 @@ docker compose down
 ├── index.html
 ├── css/
 │   └── style.css
-└── js/
-    ├── app.js
-    ├── data/
-    │   └── sounds.js
-    ├── services/
-    │   ├── sound-repository.js
-    │   ├── audio-player.js
-    │   ├── clipboard-service.js
-    │   └── toast-notifier.js
-    └── factories/
-        └── sound-card-factory.js
+├── js/
+│   ├── app.js
+│   ├── data/
+│   │   └── sounds.js
+│   ├── services/
+│   │   ├── sound-repository.js
+│   │   ├── audio-player.js
+│   │   ├── clipboard-service.js
+│   │   └── toast-notifier.js
+│   └── factories/
+│       └── sound-card-factory.js
+├── scripts/
+│   ├── env-loader.js
+│   ├── supabase-storage-uploader.js
+│   ├── upload-sounds.js
+│   └── .env.example
+├── Dockerfile
+├── docker-compose.yml
+├── .gitignore
+├── vercel.json
+├── LICENSE
+└── README.md
 ```
 
 ## Flujo de trabajo con git

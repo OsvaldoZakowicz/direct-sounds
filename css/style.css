@@ -1,11 +1,11 @@
 :root {
-  --bg: #10151b;
-  --surface: #1a222b;
-  --border: #2a3540;
-  --texto: #e7ecf0;
-  --texto-muted: #8b98a5;
-  --acento: #35d0c0;
-  --acento-oscuro: #0f6e56;
+  --bg: #ffffff;
+  --surface: #ffffff;
+  --border: #e4e4e7;
+  --texto: #18181b;
+  --texto-muted: #6f757a;
+  --acento: #e7000b;
+  --acento-oscuro: #ffe9eb;
 }
 
 * {
@@ -32,13 +32,13 @@ body {
 }
 
 .encabezado h1 {
-  font-size: 26px;
+  font-size: 20px;
   font-weight: 600;
   margin: 0 0 8px;
 }
 
 .encabezado h2 {
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 400;
   margin: 0 0 8px;
 }
@@ -46,7 +46,20 @@ body {
 .encabezado p {
   color: var(--texto-muted);
   margin: 0;
-  font-size: 14px;
+  font-size: 16px;
+}
+
+.encabezado-logo {
+  padding-bottom: 1rem;
+}
+
+.cta {
+  color: var(--acento);
+}
+
+.encabezado-titulo {
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
 }
 
 .grid {
@@ -163,7 +176,7 @@ body {
   bottom: 24px;
   transform: translate(-50%, 12px);
   background: var(--acento-oscuro);
-  color: #eafff9;
+  color: var(--texto);
   padding: 10px 16px;
   border-radius: 8px;
   font-size: 13px;
