@@ -9,3 +9,6 @@ Thumbs.db
 
 # por si en algun momento se suma alguna dependencia npm
 node_modules/
+
+# credenciales locales del script de subida, nunca se suben al repo
+scripts/.env
