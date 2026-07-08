@@ -32,13 +32,13 @@ body {
 }
 
 .encabezado h1 {
-  font-size: 26px;
+  font-size: 20px;
   font-weight: 600;
   margin: 0 0 8px;
 }
 
 .encabezado h2 {
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 400;
   margin: 0 0 8px;
 }
@@ -47,6 +47,19 @@ body {
   color: var(--texto-muted);
   margin: 0;
   font-size: 16px;
+}
+
+.encabezado-logo {
+  padding-bottom: 1rem;
+}
+
+.cta {
+  color: var(--acento);
+}
+
+.encabezado-titulo {
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
 }
 
 .grid {
