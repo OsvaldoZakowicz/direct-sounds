@@ -1,11 +1,11 @@
 :root {
-  --bg: #10151b;
-  --surface: #1a222b;
-  --border: #2a3540;
-  --texto: #e7ecf0;
-  --texto-muted: #8b98a5;
-  --acento: #35d0c0;
-  --acento-oscuro: #0f6e56;
+  --bg: #ffffff;
+  --surface: #ffffff;
+  --border: #e4e4e7;
+  --texto: #18181b;
+  --texto-muted: #6f757a;
+  --acento: #e7000b;
+  --acento-oscuro: #ffe9eb;
 }
 
 * {
@@ -46,7 +46,7 @@ body {
 .encabezado p {
   color: var(--texto-muted);
   margin: 0;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .grid {
@@ -163,7 +163,7 @@ body {
   bottom: 24px;
   transform: translate(-50%, 12px);
   background: var(--acento-oscuro);
-  color: #eafff9;
+  color: var(--texto);
   padding: 10px 16px;
   border-radius: 8px;
   font-size: 13px;
